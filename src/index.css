@@ -1,0 +1,16 @@
+.form-control {
+    width: 150px !important;
+}
+
+.form-group {
+    padding: 15px;
+}
+
+.container {
+    display: flex;
+    padding: 50px;
+}
+
+.btn-primary {
+    margin-left: 15px;
+}

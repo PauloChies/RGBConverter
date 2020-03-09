@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="src/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">    
+        <form>
+            <div class="form-group">
+                <label for="label">R</label>
+                <input type="text" class="form-control" id="inputR">
+            </div>
+            <div class="form-group">
+                <label for="label">G</label>
+                <input type="text" class="form-control" id="inputG">
+            </div>
+            <div class="form-group">
+                <label for="label">B</label>
+                <input type="text" class="form-control" id="inputB">
+            </div>
+            <button type="submit" class="btn btn-primary normalizeRGB" data-toggle="modal" data-target="#exampleModal">Normalizar RGB</button>
+        </form>
+        <form>
+            <div class="form-group">
+                <label for="label">R</label>
+                <input type="text" class="form-control" id="inputCR">
+            </div>
+            <div class="form-group">
+                <label for="label">G</label>
+                <input type="text" class="form-control" id="inputCG">
+            </div>
+            <div class="form-group">
+                <label for="label">B</label>
+                <input type="text" class="form-control" id="inputCB">
+            </div>
+            <button type="submit" class="btn btn-primary RGBtoCMYK" data-toggle="modal" data-target="#exampleModal2">RGB para CMYK</button>
+        </form>
+        <form>
+            <div class="form-group">
+                <label for="label">C</label>
+                <input type="text" class="form-control" id="inputCCMYK">
+            </div>
+            <div class="form-group">
+                <label for="label">M</label>
+                <input type="text" class="form-control" id="inputMCMYK">
+            </div>
+            <div class="form-group">
+                <label for="label">Y</label>
+                <input type="text" class="form-control" id="inputYCMYK">
+            </div>
+            <div class="form-group">
+                <label for="label">K</label>
+                <input type="text" class="form-control" id="inputKCMYK">
+            </div>
+            <button type="submit" class="btn btn-primary CMYKtoRGB" data-toggle="modal" data-target="#exampleModal3">CMYK para RGB</button>
+        </form>
+        <form>
+            <div class="form-group">
+                <label for="label">R</label>
+                <input type="text" class="form-control" id="inputHR">
+            </div>
+            <div class="form-group">
+                <label for="label">G</label>
+                <input type="text" class="form-control" id="inputHG">
+            </div>
+            <div class="form-group">
+                <label for="label">B</label>
+                <input type="text" class="form-control" id="inputHB">
+            </div>
+            <button type="submit" class="btn btn-primary RGBtoHSV" data-toggle="modal" data-target="#exampleModal4">RGB para HSV</button>
+        </form>
+        <form>
+            <div class="form-group">
+                <label for="label">H</label>
+                <input type="text" class="form-control" id="inputHH">
+            </div>
+            <div class="form-group">
+                <label for="label">S</label>
+                <input type="text" class="form-control" id="inputHS">
+            </div>
+            <div class="form-group">
+                <label for="label">V</label>
+                <input type="text" class="form-control" id="inputHV">
+            </div>
+            <button type="submit" class="btn btn-primary HSVtoRGB" data-toggle="modal" data-target="#exampleModal5">HSV para RGB</button>
+        </form>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">RGB Normalizado: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    R: <input type="text" class="form-control" id="inputNR">
+                    G: <input type="text" class="form-control" id="inputNG">
+                    B: <input type="text" class="form-control" id="inputNB">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">RGB para CMYK: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    C: <input type="text" class="form-control" id="inputC">
+                    M: <input type="text" class="form-control" id="inputM">
+                    Y: <input type="text" class="form-control" id="inputY">
+                    K: <input type="text" class="form-control" id="inputK">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">RGB para CMYK: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    R: <input type="text" class="form-control" id="inputcR">
+                    G: <input type="text" class="form-control" id="inputcG">
+                    B: <input type="text" class="form-control" id="inputcB">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">RGB para HSV: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    H: <input type="text" class="form-control" id="inputcH">
+                    S: <input type="text" class="form-control" id="inputcS">
+                    V: <input type="text" class="form-control" id="inputcV">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">HSV para RGB: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    R: <input type="text" class="form-control" id="inputHSVR">
+                    G: <input type="text" class="form-control" id="inputHSVG">
+                    B: <input type="text" class="form-control" id="inputHSVB">
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
